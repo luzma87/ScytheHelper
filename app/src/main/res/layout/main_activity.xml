@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.lzm.scythe.scythehelper.MainActivityActivity">
+    tools:context="com.lzm.scythe.scythehelper.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -27,21 +27,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <android.support.v4.view.PagerTitleStrip
-            android:id="@+id/pager_title_strip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="@color/primary_light"
-            android:paddingBottom="4dp"
-            android:paddingTop="4dp"
-            android:textColor="@color/primary" />
-    </android.support.v4.view.ViewPager>
+    <include layout="@layout/players_fragment" />
 
 </android.support.design.widget.CoordinatorLayout>
