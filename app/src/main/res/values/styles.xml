@@ -22,6 +22,19 @@
         <item name="colorControlHighlight">@color/green_light</item>
     </style>
 
+    <style name="popularity_label" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="popularity_input" parent="@android:style/TextAppearance.Medium">
+        <item name="android:inputType">number</item>
+        <item name="android:minWidth">56dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
 
     <color name="green_light">#A5D6A7</color>
 </resources>

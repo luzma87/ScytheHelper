@@ -33,10 +33,7 @@ public class PlayersFragment extends Fragment {
     private OnPlayersFragmentInteractionListener mListener;
     private Context context;
 
-    String tag = "Luz - PlayersFragment";
-
     public PlayersFragment() {
-        // Required empty public constructor
     }
 
     public static PlayersFragment newInstance() {
@@ -55,7 +52,7 @@ public class PlayersFragment extends Fragment {
 
         context = this.getActivity();
 
-        View view = inflater.inflate(R.layout.players_fragment, container, false);
+        View view = inflater.inflate(R.layout.players_setup_fragment, container, false);
 
         initializePlayerViews(view);
 

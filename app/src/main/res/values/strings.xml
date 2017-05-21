@@ -4,6 +4,9 @@
 
     <string name="app_name">ScytheHelper</string>
 
+    <string name="fragment_title_player_setup">Players setup</string>
+    <string name="fragment_title_popularity">Popularity</string>
+
     <string-array name="player_colors">
         <item>Player color</item>
         <item>Blue - Nordic</item>
@@ -12,9 +15,10 @@
         <item>Yellow - Crimea</item>
         <item>Red - Rusviet</item>
     </string-array>
-    <string name="player_name">Player %1d name</string>
+    <string name="player_name">Player %1$d name</string>
 
-    <string name="players_continue">Continue</string>
+    <string name="players_continue">Continue >> Popularity</string>
+    <string name="players_do_setup">Setup</string>
     <string-array name="players_number">
         <item>2</item>
         <item>3</item>
@@ -24,10 +28,9 @@
     <string name="players_number">Number of players</string>
     <string name="players_setup">Players setup</string>
 
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="players_do_setup">Setup</string>
-    <string name="title_activity_players">PlayersActivity</string>
+    <string name="popularity_continue">Continue >> Scoring</string>
+    <string name="popularity_label">Enter each player\'s end game popularity</string>
+    <string name="popularity_player_label">Player %1$d: %2$s</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_players">PlayersActivity</string>
 </resources>

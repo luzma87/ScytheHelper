@@ -43,27 +43,27 @@
 
         <include
             android:id="@+id/player1_layout"
-            layout="@layout/player_layout"
+            layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
             android:id="@+id/player2_layout"
-            layout="@layout/player_layout"
+            layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
             android:id="@+id/player3_layout"
-            layout="@layout/player_layout"
+            layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
             android:id="@+id/player4_layout"
-            layout="@layout/player_layout"
+            layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
             android:id="@+id/player5_layout"
-            layout="@layout/player_layout"
+            layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <Button

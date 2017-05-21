@@ -1,13 +1,58 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lzm.scythe.scythehelper.PopularityFragment">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_bottom_margin"
+    tools:context="com.lzm.scythe.scythehelper.MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/popularity_label"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+        <include
+            android:id="@+id/popularity_player1_layout"
+            layout="@layout/player_popularity_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/popularity_player2_layout"
+            layout="@layout/player_popularity_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/popularity_player3_layout"
+            layout="@layout/player_popularity_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/popularity_player4_layout"
+            layout="@layout/player_popularity_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/popularity_player5_layout"
+            layout="@layout/player_popularity_layout"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/popularity_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/popularity_continue"
+            android:theme="@style/GreenButton" />
+
+    </LinearLayout>
+</ScrollView>
