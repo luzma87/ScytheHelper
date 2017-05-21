@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import com.lzm.scythe.scythehelper.models.Game;
 import com.lzm.scythe.scythehelper.models.Player;
+import com.lzm.scythe.scythehelper.models.PlayerScore;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,7 +28,7 @@ public class PlayersFragment extends Fragment {
     private List<LinearLayout> playerViews;
     private Button playersContinue;
     private Integer numberOfPLayers;
-    private List<Player> players;
+    private List<PlayerScore> players;
     private Game game;
 
     private OnPlayersFragmentInteractionListener mListener;
@@ -91,7 +92,8 @@ public class PlayersFragment extends Fragment {
             Spinner colorInput = (Spinner) playerView.findViewById(R.id.player_color_spinner);
             String color = colorInput.getSelectedItem().toString();
             Player player = new Player(i + 1, name, color);
-            players.add(player);
+            PlayerScore playerScore = new PlayerScore(player, 0);
+            players.add(playerScore);
         }
         game = new Game(new Date(), players);
         mListener.onPlayersSetupFinished(game);

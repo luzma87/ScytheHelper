@@ -9,34 +9,21 @@ import java.util.List;
 
 public class Game implements Parcelable {
     Date date;
-    List<Player> players;
+    List<PlayerScore> players;
 
-    public Game(Date date, List<Player> players) {
+    public Game(Date date, List<PlayerScore> players) {
         this.date = date;
         this.players = players;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public List<Player> getPlayers() {
+    public List<PlayerScore> getPlayers() {
         return players;
     }
 
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
-
-    // Parcelling part
     public Game(Parcel in) {
         players = new ArrayList<>();
         this.date = new Date(in.readLong());
-        in.readTypedList(players, Player.CREATOR);
+        in.readTypedList(players, PlayerScore.CREATOR);
     }
 
     @Override

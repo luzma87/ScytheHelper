@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lzm.scythe.scythehelper.models.Game;
+import com.lzm.scythe.scythehelper.models.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,11 +69,31 @@ public class PopularityFragment extends Fragment {
             LinearLayout playerLayout = playerViews.get(i);
             playerLayout.setVisibility(View.VISIBLE);
 
-            String label = getString(R.string.popularity_player_label, i + 1, currentGame.getPlayers().get(i).getName());
             TextView playerLabel = (TextView) playerLayout.findViewById(R.id.popularity_player_label);
-            playerLabel.setText(label);
+            TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.popularity_player_color_tag);
+            Player player = currentGame.getPlayers().get(i).getPlayer();
+            playerLabel.setText(player.getName());
+            playerColorTag.setBackgroundResource(playerColor(player.getColor()));
         }
     }
+
+    private int playerColor(String playerColor) {
+        switch (playerColor) {
+            case "Blue - Nordic":
+                return R.color.player_blue;
+            case "Black - Saxony":
+                return R.color.player_black;
+            case "White - Polania":
+                return R.color.player_white;
+            case "Yellow - Crimea":
+                return R.color.player_yellow;
+            case "Red - Rusviet":
+                return R.color.player_red;
+            default:
+                return 0;
+        }
+    }
+
 
     @Override
     public void onAttach(Context context) {
