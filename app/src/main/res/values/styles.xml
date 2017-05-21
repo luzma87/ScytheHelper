@@ -34,7 +34,4 @@
         <item name="android:textColor">@color/primary_dark</item>
         <item name="android:typeface">monospace</item>
     </style>
-
-
-    <color name="green_light">#A5D6A7</color>
 </resources>
