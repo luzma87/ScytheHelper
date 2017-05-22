@@ -12,6 +12,7 @@ import com.lzm.scythe.scythehelper.helpers.FragmentsHelper;
 import com.lzm.scythe.scythehelper.models.Game;
 
 public class MainActivity extends AppCompatActivity implements
+        StartFragment.OnStartFragmentInteractionListener,
         PlayersSetupFragment.OnPlayersFragmentInteractionListener,
         PopularityFragment.OnPopularityFragmentInteractionListener,
         ScoringFragment.OnScoringFragmentInteractionListener,
@@ -27,6 +28,12 @@ public class MainActivity extends AppCompatActivity implements
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Fragment startFragment = StartFragment.newInstance();
+        FragmentsHelper.openFragment(this, startFragment, getString(R.string.app_name), false);
+    }
+
+    @Override
+    public void onStartCalculating() {
         Fragment playersFragment = PlayersSetupFragment.newInstance();
         FragmentsHelper.openFragment(this, playersFragment, getString(R.string.fragment_title_player_setup), false);
     }
@@ -36,12 +43,6 @@ public class MainActivity extends AppCompatActivity implements
         hideKeyboard();
         Fragment popularityFragment = PopularityFragment.newInstance(game);
         FragmentsHelper.openFragment(this, popularityFragment, getString(R.string.fragment_title_popularity), false);
-    }
-
-    private void hideKeyboard() {
-        View v = findViewById(R.id.fragment_container);
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 
     @Override
@@ -63,5 +64,11 @@ public class MainActivity extends AppCompatActivity implements
         hideKeyboard();
         Fragment playersFragment = PlayersSetupFragment.newInstance();
         FragmentsHelper.openFragment(this, playersFragment, getString(R.string.fragment_title_player_setup), false);
+    }
+
+    private void hideKeyboard() {
+        View v = findViewById(R.id.fragment_container);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 }
