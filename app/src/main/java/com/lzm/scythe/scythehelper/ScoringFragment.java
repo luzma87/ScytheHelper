@@ -18,6 +18,8 @@ import com.lzm.scythe.scythehelper.models.PlayerScore;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.lzm.scythe.scythehelper.helpers.PlayerColorHelper.playerColor;
+
 public class ScoringFragment extends Fragment {
     private static final String ARG_GAME = "game";
     private int numberOfPlayers;
@@ -111,23 +113,6 @@ public class ScoringFragment extends Fragment {
             Player player = game.getPlayers().get(i).getPlayer();
             playerLabel.setText(player.getName());
             playerColorTag.setBackgroundResource(playerColor(player.getColor()));
-        }
-    }
-
-    private int playerColor(String playerColor) {
-        switch (playerColor) {
-            case "Blue - Nordic":
-                return R.color.player_blue;
-            case "Black - Saxony":
-                return R.color.player_black;
-            case "White - Polania":
-                return R.color.player_white;
-            case "Yellow - Crimea":
-                return R.color.player_yellow;
-            case "Red - Rusviet":
-                return R.color.player_red;
-            default:
-                return 0;
         }
     }
 

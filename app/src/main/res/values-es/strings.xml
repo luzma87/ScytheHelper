@@ -9,12 +9,12 @@
     <string name="fragment_title_scoring">Puntuación</string>
 
     <string-array name="player_colors">
-        <item>Player color</item>
-        <item>Blue - Nordic</item>
-        <item>Black - Saxony</item>
-        <item>White - Polania</item>
-        <item>Yellow - Crimea</item>
-        <item>Red - Rusviet</item>
+        <item>Color jugador</item>
+        <item>Azul - Nordic</item>
+        <item>Negro - Saxony</item>
+        <item>Blanco - Polania</item>
+        <item>Amarillo - Crimea</item>
+        <item>Rojo - Rusviet</item>
     </string-array>
     <string name="player_name">Nombre jugador %1$d</string>
 

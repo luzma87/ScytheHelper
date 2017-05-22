@@ -20,6 +20,8 @@ import com.lzm.scythe.scythehelper.models.PopularityScoringTier;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.lzm.scythe.scythehelper.helpers.PlayerColorHelper.playerColor;
+
 public class FinalScoreFragment extends Fragment {
     private static final String ARG_GAME = "game";
 
@@ -146,23 +148,6 @@ public class FinalScoreFragment extends Fragment {
                 return 6;
             case 6:
                 return 9;
-            default:
-                return 0;
-        }
-    }
-
-    private int playerColor(String playerColor) {
-        switch (playerColor) {
-            case "Blue - Nordic":
-                return R.color.player_blue;
-            case "Black - Saxony":
-                return R.color.player_black;
-            case "White - Polania":
-                return R.color.player_white;
-            case "Yellow - Crimea":
-                return R.color.player_yellow;
-            case "Red - Rusviet":
-                return R.color.player_red;
             default:
                 return 0;
         }
