@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_bottom_margin"
-    tools:context="com.lzm.scythe.scythehelper.MainActivity">
+    tools:context="com.lzm.scythe.scythehelper.ScoringFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,39 +18,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="@string/popularity_label"
+            android:text="@string/scoring_label"
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         <include
-            android:id="@+id/popularity_player1_layout"
-            layout="@layout/player_popularity_layout"
+            android:id="@+id/scoring_player1_layout"
+            layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player2_layout"
-            layout="@layout/player_popularity_layout"
+            android:id="@+id/scoring_player2_layout"
+            layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player3_layout"
-            layout="@layout/player_popularity_layout"
+            android:id="@+id/scoring_player3_layout"
+            layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player4_layout"
-            layout="@layout/player_popularity_layout"
+            android:id="@+id/scoring_player4_layout"
+            layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player5_layout"
-            layout="@layout/player_popularity_layout"
+            android:id="@+id/scoring_player5_layout"
+            layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <Button
             android:id="@+id/popularity_continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/popularity_continue"
+            android:text="@string/scoring_continue"
             android:theme="@style/GreenButton" />
 
     </LinearLayout>

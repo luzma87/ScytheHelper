@@ -75,9 +75,7 @@ public class PlayersFragment extends Fragment {
         playersContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mListener != null) {
-                    finishPlayersSetup();
-                }
+                finishPlayersSetup();
             }
         });
 
@@ -92,11 +90,13 @@ public class PlayersFragment extends Fragment {
             Spinner colorInput = (Spinner) playerView.findViewById(R.id.player_color_spinner);
             String color = colorInput.getSelectedItem().toString();
             Player player = new Player(i + 1, name, color);
-            PlayerScore playerScore = new PlayerScore(player, 0);
+            PlayerScore playerScore = new PlayerScore(player);
             players.add(playerScore);
         }
         game = new Game(new Date(), players);
-        mListener.onPlayersSetupFinished(game);
+        if (mListener != null) {
+            mListener.onPlayersSetupFinished(game);
+        }
     }
 
     private void setupPlayers() {

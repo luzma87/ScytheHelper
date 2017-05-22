@@ -34,4 +34,15 @@
         <item name="android:textColor">@color/primary_dark</item>
         <item name="android:typeface">monospace</item>
     </style>
+
+    <style name="scoring_label" parent="@android:style/TextAppearance.Material.Small">
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+    <style name="scoring_input" parent="@android:style/TextAppearance.Material.Small">
+        <item name="android:inputType">number</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
 </resources>

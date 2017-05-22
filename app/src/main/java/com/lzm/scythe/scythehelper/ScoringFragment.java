@@ -18,23 +18,19 @@ import com.lzm.scythe.scythehelper.models.PlayerScore;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PopularityFragment extends Fragment {
-
+public class ScoringFragment extends Fragment {
     private static final String ARG_GAME = "game";
-
     private int numberOfPlayers;
-
+    private List<LinearLayout> playerViews;
     private Game game;
 
-    private OnPopularityFragmentInteractionListener mListener;
+    private OnScoringFragmentInteractionListener mListener;
 
-    private List<LinearLayout> playerViews;
-
-    public PopularityFragment() {
+    public ScoringFragment() {
     }
 
-    public static PopularityFragment newInstance(Game game) {
-        PopularityFragment fragment = new PopularityFragment();
+    public static ScoringFragment newInstance(Game game) {
+        ScoringFragment fragment = new ScoringFragment();
         Bundle args = new Bundle();
         args.putParcelable(ARG_GAME, game);
         fragment.setArguments(args);
@@ -53,50 +49,65 @@ public class PopularityFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.popularity_fragment, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.scoring_fragment, container, false);
         initializePlayerViews(view);
 
         Button popularityContinue = (Button) view.findViewById(R.id.popularity_continue);
         popularityContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishPopularityInput();
+                finishScoringInput();
             }
         });
-
         return view;
     }
 
-    private void finishPopularityInput() {
+    private void finishScoringInput() {
         for (int i = 0; i < numberOfPlayers; i++) {
             PlayerScore playerScore = game.getPlayers().get(i);
             LinearLayout playerLayout = playerViews.get(i);
 
-            EditText playerPopularityInput = (EditText) playerLayout.findViewById(R.id.popularity_player_value);
-            int playerPopularity = Integer.parseInt(playerPopularityInput.getText().toString());
+            int playerCoins = getPlayerStat(playerLayout, R.id.scoring_coins_value);
+            playerScore.setCoins(playerCoins);
 
-            playerScore.setPopularity(playerPopularity);
+            int playerStars = getPlayerStat(playerLayout, R.id.scoring_stars_value);
+            playerScore.setStars(playerStars);
+
+            int playerTerritories = getPlayerStat(playerLayout, R.id.scoring_territories_value);
+            playerScore.setTerritories(playerTerritories);
+
+            int playerResources = getPlayerStat(playerLayout, R.id.scoring_resources_value);
+            playerScore.setResources(playerResources);
+
+            int playerStructures = getPlayerStat(playerLayout, R.id.scoring_structures_value);
+            playerScore.setStructures(playerStructures);
         }
         if (mListener != null) {
-            mListener.onPopularityDone(game);
+            mListener.onScoringDone(game);
         }
+    }
+
+    private int getPlayerStat(LinearLayout playerLayout, int inputId) {
+        EditText playerStarsInput = (EditText) playerLayout.findViewById(inputId);
+        return Integer.parseInt(playerStarsInput.getText().toString());
     }
 
     private void initializePlayerViews(View view) {
         playerViews = new ArrayList<>();
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player1_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player2_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player3_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player4_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player5_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player1_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player2_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player3_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player4_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player5_layout));
 
         for (int i = 0; i < numberOfPlayers; i++) {
             LinearLayout playerLayout = playerViews.get(i);
             playerLayout.setVisibility(View.VISIBLE);
 
-            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.popularity_player_label);
-            TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.popularity_player_color_tag);
+            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.player_scoring_name);
+            TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.scoring_player_color_tag);
             Player player = game.getPlayers().get(i).getPlayer();
             playerLabel.setText(player.getName());
             playerColorTag.setBackgroundResource(playerColor(player.getColor()));
@@ -123,11 +134,11 @@ public class PopularityFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnPopularityFragmentInteractionListener) {
-            mListener = (OnPopularityFragmentInteractionListener) context;
+        if (context instanceof OnScoringFragmentInteractionListener) {
+            mListener = (OnScoringFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnPlayersFragmentInteractionListener");
+                    + " must implement OnScoringFragmentInteractionListener");
         }
     }
 
@@ -137,7 +148,7 @@ public class PopularityFragment extends Fragment {
         mListener = null;
     }
 
-    public interface OnPopularityFragmentInteractionListener {
-        void onPopularityDone(Game game);
+    public interface OnScoringFragmentInteractionListener {
+        void onScoringDone(Game game);
     }
 }
