@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_bottom_margin"
+    tools:context="com.lzm.scythe.scythehelper.FinalScoreFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/final_score_label"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+        <include
+            android:id="@+id/final_score_player1_layout"
+            layout="@layout/player_final_score_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/final_score_player2_layout"
+            layout="@layout/player_final_score_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/final_score_player3_layout"
+            layout="@layout/player_final_score_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/final_score_player4_layout"
+            layout="@layout/player_final_score_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/final_score_player5_layout"
+            layout="@layout/player_final_score_layout"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

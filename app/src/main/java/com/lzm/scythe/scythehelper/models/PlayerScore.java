@@ -32,6 +32,30 @@ public class PlayerScore implements Parcelable {
         return player;
     }
 
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public int getTerritories() {
+        return territories;
+    }
+
+    public int getResources() {
+        return resources;
+    }
+
+    public int getStructures() {
+        return structures;
+    }
+
     public void setPopularity(int popularity) {
         this.popularity = popularity;
     }

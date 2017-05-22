@@ -2,6 +2,7 @@ package com.lzm.scythe.scythehelper;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +15,8 @@ import com.lzm.scythe.scythehelper.models.Game;
 public class MainActivity extends AppCompatActivity implements
         PlayersSetupFragment.OnPlayersFragmentInteractionListener,
         PopularityFragment.OnPopularityFragmentInteractionListener,
-        ScoringFragment.OnScoringFragmentInteractionListener {
+        ScoringFragment.OnScoringFragmentInteractionListener,
+        FinalScoreFragment.OnFinalScoreFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,12 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onScoringDone(Game game) {
         hideKeyboard();
+        Fragment finalScoreFragment = FinalScoreFragment.newInstance(game);
+        FragmentsHelper.openFragment(this, finalScoreFragment, getString(R.string.fragment_title_final_score), false);
+    }
+
+    @Override
+    public void onAllDone(Uri uri) {
 
     }
 }

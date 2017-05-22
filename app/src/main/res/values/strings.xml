@@ -4,6 +4,9 @@
 
     <string name="app_name">ScytheHelper</string>
 
+    <string name="final_score_label">These are the final scores</string>
+
+    <string name="fragment_title_final_score">Final score</string>
     <string name="fragment_title_player_setup">Players setup</string>
     <string name="fragment_title_popularity">Popularity</string>
     <string name="fragment_title_scoring">Scoring</string>
@@ -21,7 +24,6 @@
     <string name="players_continue">Continue &gt;&gt; Popularity</string>
     <string name="players_do_setup">Setup</string>
     <string-array name="players_number">
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -33,13 +35,13 @@
     <string name="popularity_continue">Continue &gt;&gt; Scoring</string>
     <string name="popularity_label">Enter each player\'s end game popularity</string>
 
+    <string name="scoring_coins">Coins</string>
     <string name="scoring_continue">Calculate final score</string>
     <string name="scoring_label">Enter each player\'s scores</string>
+    <string name="scoring_resources">Resources</string>
+    <string name="scoring_stars">Stars</string>
+    <string name="scoring_structures">Structures</string>
+    <string name="scoring_territories">Territories bonus</string>
 
     <string name="title_activity_players">PlayersActivity</string>
-    <string name="scoring_coins">Coins</string>
-    <string name="scoring_stars">Stars</string>
-    <string name="scoring_territories">Territories</string>
-    <string name="scoring_resources">Resources</string>
-    <string name="scoring_structures">Structures</string>
 </resources>
