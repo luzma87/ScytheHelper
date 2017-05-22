@@ -2,7 +2,6 @@ package com.lzm.scythe.scythehelper;
 
 import android.app.Fragment;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -60,7 +59,9 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onAllDone(Uri uri) {
-
+    public void onNewGame() {
+        hideKeyboard();
+        Fragment playersFragment = PlayersSetupFragment.newInstance();
+        FragmentsHelper.openFragment(this, playersFragment, getString(R.string.fragment_title_player_setup), false);
     }
 }

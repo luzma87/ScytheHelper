@@ -45,5 +45,12 @@
             android:id="@+id/final_score_player5_layout"
             layout="@layout/player_final_score_layout"
             android:visibility="gone" />
+
+        <Button
+            android:id="@+id/new_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/final_score_continue"
+            android:theme="@style/GreenButton" />
     </LinearLayout>
 </ScrollView>

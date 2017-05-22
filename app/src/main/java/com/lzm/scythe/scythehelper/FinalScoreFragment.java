@@ -2,13 +2,13 @@ package com.lzm.scythe.scythehelper;
 
 import android.app.Fragment;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -68,8 +68,22 @@ public class FinalScoreFragment extends Fragment {
         View view = inflater.inflate(R.layout.final_score_fragment, container, false);
         initializePlayerViews(view);
 
+        Button popularityContinue = (Button) view.findViewById(R.id.new_game);
+        popularityContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newGame();
+            }
+        });
         return view;
     }
+
+    private void newGame() {
+        if (mListener != null) {
+            mListener.onNewGame();
+        }
+    }
+
 
     private void initializePlayerViews(View view) {
         playerViews = new ArrayList<>();
@@ -172,6 +186,6 @@ public class FinalScoreFragment extends Fragment {
     }
 
     public interface OnFinalScoreFragmentInteractionListener {
-        void onAllDone(Uri uri);
+        void onNewGame();
     }
 }

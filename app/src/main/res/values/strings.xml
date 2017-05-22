@@ -44,4 +44,5 @@
     <string name="scoring_territories">Territories bonus</string>
 
     <string name="title_activity_players">PlayersActivity</string>
+    <string name="final_score_continue">New game</string>
 </resources>
