@@ -12,7 +12,7 @@ import com.lzm.scythe.scythehelper.helpers.FragmentsHelper;
 import com.lzm.scythe.scythehelper.models.Game;
 
 public class MainActivity extends AppCompatActivity implements
-        PlayersFragment.OnPlayersFragmentInteractionListener,
+        PlayersSetupFragment.OnPlayersFragmentInteractionListener,
         PopularityFragment.OnPopularityFragmentInteractionListener,
         ScoringFragment.OnScoringFragmentInteractionListener {
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Fragment playersFragment = PlayersFragment.newInstance();
+        Fragment playersFragment = PlayersSetupFragment.newInstance();
         FragmentsHelper.openFragment(this, playersFragment, getString(R.string.fragment_title_player_setup), false);
     }
 
@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onScoringDone(Game game) {
         hideKeyboard();
-        
+
     }
 }

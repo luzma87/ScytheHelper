@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class PlayersFragment extends Fragment {
+public class PlayersSetupFragment extends Fragment {
 
     private Spinner playersNumber;
     private List<LinearLayout> playerViews;
@@ -34,11 +34,11 @@ public class PlayersFragment extends Fragment {
     private OnPlayersFragmentInteractionListener mListener;
     private Context context;
 
-    public PlayersFragment() {
+    public PlayersSetupFragment() {
     }
 
-    public static PlayersFragment newInstance() {
-        return new PlayersFragment();
+    public static PlayersSetupFragment newInstance() {
+        return new PlayersSetupFragment();
     }
 
     @Override
