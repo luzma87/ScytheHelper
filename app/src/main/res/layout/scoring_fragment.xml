@@ -22,27 +22,27 @@
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         <include
-            android:id="@+id/scoring_player1_layout"
+            android:id="@+id/player1_scoring_layout"
             layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/scoring_player2_layout"
+            android:id="@+id/player2_scoring_layout"
             layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/scoring_player3_layout"
+            android:id="@+id/player3_scoring_layout"
             layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/scoring_player4_layout"
+            android:id="@+id/player4_scoring_layout"
             layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/scoring_player5_layout"
+            android:id="@+id/player5_scoring_layout"
             layout="@layout/player_scoring_layout"
             android:visibility="gone" />
 

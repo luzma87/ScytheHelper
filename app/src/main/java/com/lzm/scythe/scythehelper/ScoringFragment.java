@@ -96,17 +96,17 @@ public class ScoringFragment extends Fragment {
 
     private void initializePlayerViews(View view) {
         playerViews = new ArrayList<>();
-        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player1_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player2_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player3_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player4_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.scoring_player5_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player1_scoring_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player2_scoring_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player3_scoring_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player4_scoring_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player5_scoring_layout));
 
         for (int i = 0; i < numberOfPlayers; i++) {
             LinearLayout playerLayout = playerViews.get(i);
             playerLayout.setVisibility(View.VISIBLE);
 
-            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.player_scoring_name);
+            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.scoring_player_name);
             TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.scoring_player_color_tag);
             Player player = game.getPlayers().get(i).getPlayer();
             playerLabel.setText(player.getName());

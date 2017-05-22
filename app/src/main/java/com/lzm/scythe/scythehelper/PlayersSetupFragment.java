@@ -57,13 +57,13 @@ public class PlayersSetupFragment extends Fragment {
 
         initializePlayerViews(view);
 
-        playersNumber = (Spinner) view.findViewById(R.id.players_number_spinner);
+        playersNumber = (Spinner) view.findViewById(R.id.players_setup_number);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, R.array.players_number, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         playersNumber.setAdapter(adapter);
 
 
-        Button playersSetup = (Button) view.findViewById(R.id.players_do_setup);
+        Button playersSetup = (Button) view.findViewById(R.id.players_setup);
         playersSetup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,7 +71,7 @@ public class PlayersSetupFragment extends Fragment {
             }
         });
 
-        playersContinue = (Button) view.findViewById(R.id.players_continue);
+        playersContinue = (Button) view.findViewById(R.id.players_setup_continue);
         playersContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,9 +85,9 @@ public class PlayersSetupFragment extends Fragment {
     private void finishPlayersSetup() {
         for (int i = 0; i < numberOfPLayers; i++) {
             LinearLayout playerView = playerViews.get(i);
-            EditText nameInput = (EditText) playerView.findViewById(R.id.player_name);
+            EditText nameInput = (EditText) playerView.findViewById(R.id.player_setup_name);
             String name = nameInput.getText().toString();
-            Spinner colorInput = (Spinner) playerView.findViewById(R.id.player_color_spinner);
+            Spinner colorInput = (Spinner) playerView.findViewById(R.id.player_setup_color);
             String color = colorInput.getSelectedItem().toString();
             Player player = new Player(i + 1, name, color);
             PlayerScore playerScore = new PlayerScore(player);
@@ -110,11 +110,11 @@ public class PlayersSetupFragment extends Fragment {
 
     private void initializePlayerViews(View view) {
         playerViews = new ArrayList<>();
-        playerViews.add((LinearLayout) view.findViewById(R.id.player1_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.player2_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.player3_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.player4_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.player5_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player1_setup_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player2_setup_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player3_setup_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player4_setup_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player5_setup_layout));
     }
 
     private void resetPlayers() {
@@ -128,10 +128,10 @@ public class PlayersSetupFragment extends Fragment {
         playerLayout.setVisibility(View.VISIBLE);
         String playerLabel = getString(R.string.player_name, playerNumber);
 
-        EditText playerName = (EditText) playerLayout.findViewById(R.id.player_name);
+        EditText playerName = (EditText) playerLayout.findViewById(R.id.player_setup_name);
         playerName.setHint(playerLabel);
 
-        Spinner spinner = (Spinner) playerLayout.findViewById(R.id.player_color_spinner);
+        Spinner spinner = (Spinner) playerLayout.findViewById(R.id.player_setup_color);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, R.array.player_colors, android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

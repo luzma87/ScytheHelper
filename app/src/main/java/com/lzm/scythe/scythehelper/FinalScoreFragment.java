@@ -68,7 +68,7 @@ public class FinalScoreFragment extends Fragment {
         View view = inflater.inflate(R.layout.final_score_fragment, container, false);
         initializePlayerViews(view);
 
-        Button popularityContinue = (Button) view.findViewById(R.id.new_game);
+        Button popularityContinue = (Button) view.findViewById(R.id.final_score_new_game);
         popularityContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,9 +101,9 @@ public class FinalScoreFragment extends Fragment {
             CardView playerCard = (CardView) playerLayout.findViewById(R.id.final_score_card);
             playerLayout.setVisibility(View.VISIBLE);
 
-            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.player_final_score_name);
+            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.final_score_player_name);
             TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.final_score_player_color_tag);
-            TextView playerFinalScore = (TextView) playerLayout.findViewById(R.id.player_final_score_value);
+            TextView playerFinalScore = (TextView) playerLayout.findViewById(R.id.final_score);
             PlayerScore playerScore = game.getPlayers().get(i);
             Player player = playerScore.getPlayer();
             playerLabel.setText(player.getName());

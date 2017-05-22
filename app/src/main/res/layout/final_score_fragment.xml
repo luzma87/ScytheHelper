@@ -47,7 +47,7 @@
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/new_game"
+            android:id="@+id/final_score_new_game"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/final_score_continue"

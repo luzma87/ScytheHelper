@@ -22,27 +22,27 @@
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         <include
-            android:id="@+id/popularity_player1_layout"
+            android:id="@+id/player1_popularity_layout"
             layout="@layout/player_popularity_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player2_layout"
+            android:id="@+id/player2_popularity_layout"
             layout="@layout/player_popularity_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player3_layout"
+            android:id="@+id/player3_popularity_layout"
             layout="@layout/player_popularity_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player4_layout"
+            android:id="@+id/player4_popularity_layout"
             layout="@layout/player_popularity_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/popularity_player5_layout"
+            android:id="@+id/player5_popularity_layout"
             layout="@layout/player_popularity_layout"
             android:visibility="gone" />
 

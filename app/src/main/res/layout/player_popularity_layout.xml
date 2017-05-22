@@ -13,15 +13,15 @@
         android:background="@color/green"/>
 
     <TextView
-        android:id="@+id/popularity_player_label"
+        android:id="@+id/popularity_player_name"
         style="@style/popularity_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@+id/popularity_player_value"
+        android:labelFor="@+id/popularity_value"
         android:text="player" />
 
     <EditText
-        android:id="@+id/popularity_player_value"
+        android:id="@+id/popularity_value"
         style="@style/popularity_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

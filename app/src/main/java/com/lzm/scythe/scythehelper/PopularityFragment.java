@@ -73,7 +73,7 @@ public class PopularityFragment extends Fragment {
             PlayerScore playerScore = game.getPlayers().get(i);
             LinearLayout playerLayout = playerViews.get(i);
 
-            EditText playerPopularityInput = (EditText) playerLayout.findViewById(R.id.popularity_player_value);
+            EditText playerPopularityInput = (EditText) playerLayout.findViewById(R.id.popularity_value);
             int playerPopularity = Integer.parseInt(playerPopularityInput.getText().toString());
 
             playerScore.setPopularity(playerPopularity);
@@ -85,17 +85,17 @@ public class PopularityFragment extends Fragment {
 
     private void initializePlayerViews(View view) {
         playerViews = new ArrayList<>();
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player1_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player2_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player3_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player4_layout));
-        playerViews.add((LinearLayout) view.findViewById(R.id.popularity_player5_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player1_popularity_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player2_popularity_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player3_popularity_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player4_popularity_layout));
+        playerViews.add((LinearLayout) view.findViewById(R.id.player5_popularity_layout));
 
         for (int i = 0; i < numberOfPlayers; i++) {
             LinearLayout playerLayout = playerViews.get(i);
             playerLayout.setVisibility(View.VISIBLE);
 
-            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.popularity_player_label);
+            TextView playerLabel = (TextView) playerLayout.findViewById(R.id.popularity_player_name);
             TextView playerColorTag = (TextView) playerLayout.findViewById(R.id.popularity_player_color_tag);
             Player player = game.getPlayers().get(i).getPlayer();
             playerLabel.setText(player.getName());

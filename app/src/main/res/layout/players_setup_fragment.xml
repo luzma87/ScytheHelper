@@ -28,13 +28,13 @@
                 android:text="@string/players_number" />
 
             <Spinner
-                android:id="@+id/players_number_spinner"
+                android:id="@+id/players_setup_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="50dp" />
 
             <Button
-                android:id="@+id/players_do_setup"
+                android:id="@+id/players_setup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/players_do_setup"
@@ -42,32 +42,32 @@
         </com.google.android.flexbox.FlexboxLayout>
 
         <include
-            android:id="@+id/player1_layout"
+            android:id="@+id/player1_setup_layout"
             layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/player2_layout"
+            android:id="@+id/player2_setup_layout"
             layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/player3_layout"
+            android:id="@+id/player3_setup_layout"
             layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/player4_layout"
+            android:id="@+id/player4_setup_layout"
             layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <include
-            android:id="@+id/player5_layout"
+            android:id="@+id/player5_setup_layout"
             layout="@layout/player_setup_layout"
             android:visibility="gone" />
 
         <Button
-            android:id="@+id/players_continue"
+            android:id="@+id/players_setup_continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/players_continue"
