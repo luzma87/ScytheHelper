@@ -1,12 +1,12 @@
-package com.lzm.scythe.scythehelper.helpers;
+package com.lzm.score.helper.helpers;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-import com.lzm.scythe.scythehelper.MainActivity;
-import com.lzm.scythe.scythehelper.R;
+import com.lzm.score.helper.MainActivity;
+import com.lzm.score.helper.R;
 
 public class FragmentsHelper {
 

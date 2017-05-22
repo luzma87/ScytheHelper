@@ -1,4 +1,4 @@
-package com.lzm.scythe.scythehelper;
+package com.lzm.score.helper;
 
 import android.app.Fragment;
 import android.content.Context;

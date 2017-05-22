@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_bottom_margin"
-    tools:context="com.lzm.scythe.scythehelper.ScoringFragment">
+    tools:context="com.lzm.score.helper.ScoringFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

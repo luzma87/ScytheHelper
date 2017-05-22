@@ -1,4 +1,4 @@
-package com.lzm.scythe.scythehelper.models;
+package com.lzm.score.helper.models;
 
 public class PopularityScoringTier {
     private int min;

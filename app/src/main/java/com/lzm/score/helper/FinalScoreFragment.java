@@ -1,4 +1,4 @@
-package com.lzm.scythe.scythehelper;
+package com.lzm.score.helper;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -12,15 +12,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lzm.scythe.scythehelper.models.Game;
-import com.lzm.scythe.scythehelper.models.Player;
-import com.lzm.scythe.scythehelper.models.PlayerScore;
-import com.lzm.scythe.scythehelper.models.PopularityScoringTier;
+import com.lzm.score.helper.models.Game;
+import com.lzm.score.helper.models.Player;
+import com.lzm.score.helper.models.PlayerScore;
+import com.lzm.score.helper.models.PopularityScoringTier;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.lzm.scythe.scythehelper.helpers.PlayerColorHelper.playerColor;
+import static com.lzm.score.helper.helpers.PlayerColorHelper.playerColor;
 
 public class FinalScoreFragment extends Fragment {
     private static final String ARG_GAME = "game";

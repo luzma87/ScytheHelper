@@ -1,4 +1,4 @@
-package com.lzm.scythe.scythehelper;
+package com.lzm.score.helper;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-import com.lzm.scythe.scythehelper.helpers.FragmentsHelper;
-import com.lzm.scythe.scythehelper.models.Game;
+import com.lzm.score.helper.helpers.FragmentsHelper;
+import com.lzm.score.helper.models.Game;
 
 public class MainActivity extends AppCompatActivity implements
         StartFragment.OnStartFragmentInteractionListener,

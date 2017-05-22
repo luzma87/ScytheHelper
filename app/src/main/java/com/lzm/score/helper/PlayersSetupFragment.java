@@ -1,4 +1,4 @@
-package com.lzm.scythe.scythehelper;
+package com.lzm.score.helper;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
-import com.lzm.scythe.scythehelper.models.Game;
-import com.lzm.scythe.scythehelper.models.Player;
-import com.lzm.scythe.scythehelper.models.PlayerScore;
+import com.lzm.score.helper.models.Game;
+import com.lzm.score.helper.models.Player;
+import com.lzm.score.helper.models.PlayerScore;
 
 import java.util.ArrayList;
 import java.util.Date;

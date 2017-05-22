@@ -42,5 +42,5 @@
     <string name="scoring_territories">Bonus territorios</string>
 
     <string name="start">Empezar</string>
-    <string name="start_text">Esta es la primera versión de una app que ayude con la puntuación de Scythe. Cosas por hacer: hacer que grabe en una db para tener históricos, agregar gráficos, agregar validaciones…</string>
+    <string name="start_text">Esta es la primera versión de una app que ayude con la puntuación. Cosas por hacer: hacer que grabe en una db para tener históricos, agregar gráficos, agregar validaciones…</string>
 </resources>

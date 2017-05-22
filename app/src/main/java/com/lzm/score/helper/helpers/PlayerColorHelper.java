@@ -1,6 +1,6 @@
-package com.lzm.scythe.scythehelper.helpers;
+package com.lzm.score.helper.helpers;
 
-import com.lzm.scythe.scythehelper.R;
+import com.lzm.score.helper.R;
 
 public class PlayerColorHelper {
     public static int playerColor(String playerColor) {
